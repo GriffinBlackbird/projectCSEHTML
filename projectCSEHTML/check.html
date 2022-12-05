@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/lightslider.css">
+    <script src="static/js/JQuery3.3.1.js"></script>
+    <script src="static/js/lightslider.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .movieBanner{
+            width: 90%;
+            max-width: 1400px;
+            margin-top: 100px;
+            margin-left: 70px;
+            min-height: 520px;
+            padding: 60px 40px 40px 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .movieBanner::after{
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 32, 32, 0.7);
+            background: linear-gradient(0deg, rgba(8,8,8) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        .mbImg::before{
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 32, 32, 0.7);
+            background: linear-gradient(-90deg, rgba(37, 37, 37, 0.2) 0%, rgba(15, 15, 15,0.3) 100%);
+
+        }
+
+        .mbImg{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .mbImg img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .buttonss{
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            margin: 10px;
+        }
+        .buttonss button{
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: gold;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            transform: translateZ(200px);
+        }
+        .buttonss button a{
+            text-decoration: none;
+            color: black;
+        }
+        .buttonss button:hover{
+            background-color: gold;
+            color: black;
+            border-radius: 10px 0 10px 0; 
+        }
+        .buttonss .fa-circle-play{
+            margin-right: 10px;
+            padding-top: 20px;
+            color: gold;
+        }
+        #main{
+    padding-top: 80px;
+    background-color: gold;
+}
+.showcaseBox{
+    width: 430px;
+    height: 250px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin: 20px 20px 10px 20px;
+    overflow: hidden;
+
+
+}
+.showcaseBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+.showcaseHead{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+}
+.latestHead{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+}
+
+
+  
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="#" class="link-logo"></a></li>
+                <li><a class="atag" href="#"><b>Home</b></a></li>
+                <li><a class="atag" href="about.html"><b>About</b></a></li>
+                <li><a class="atag" href="contact.html"><b>Contact Us</b></a></li>
+                <li><a class="atag" href="#"><b>Offers</b></a></li>
+                <li><a  href="#" class="link-search"></a></li>
+            </ul>
+        </nav>
+        <div class="search-container hide">
+            <div class="link-search"></div>
+            <div class="search-bar">
+                <form accept="">
+                    <input type="text" placeholder="Search SwiftMovies.com" autocomplete="off">
+                </form>
+            </div>
+            <div class="link-close"></div>
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="?">Romance</a>
+                    </li>
+                    <li>
+                        <a href="#">Thriller</a>
+                    </li>
+                    <li>
+                        <a href="#">Action</a>
+                    </li>
+                    <li>
+                        <a href="#">Horror</a>
+                    </li>
+                    <li>
+                        <a href="latest.html">Latest Movies</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="main">
+        <h1 class="showcaseHead"><b>Upcoming movies</b></h1>
+
+        <ul id="lightSlider" >
+            <li class="item-a">
+                <div class="showcaseBox">
+                    <img src="static/images/va.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="showcaseBox">
+                    <img src="static/images/VVVV.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="showcaseBox">
+                    <img src="static/images/Udhayanidhi-Stalin.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="showcaseBox">
+                    <img src="static/images/9631ce042b.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="showcaseBox">
+                    <img src="static/images/87356005.jpg" alt="">
+                </div>
+            </li>
+          </ul>
+    </section>
+
+    <h1 class="latestHead"><b>Popular Hits</b></h1>
+    <div class="bookings">
+        
+        <div class="m1">
+            
+            <div class="movImage">
+                <img src="static/images/wakanda-forever/wk..jpeg" alt="">
+            </div>
+            <div class="details">
+                <h1 class="h1mov">Wakanda-Forever</h1>
+                <h3 class="h3mov">Directed by Ryan Coogler</h3>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span class="span">4/5</span>
+                </div>
+                <div class="tags">
+                    <span>Action</span>
+                    <span>Heist</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae dolores tempora eos suscipit culpa dolore nostrum sit corrupti assumenda aspernatur ad, ipsam nulla quibusdam consequatur magni fugiat. Harum repellendus perferendis, aut in tenetur dicta aspernatur voluptate, maiores dolores eos modi quod totam optio quas eius. Amet totam eos laborum enim. </p>
+                </div>
+                <div class="cast">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="static/images/wrath-cast/jason1.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/Niamh3.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/post4.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/scott2.jpeg"></li>
+                    </ul>
+                </div>
+                <div class="buttonss">
+                    <i class="fa-regular fa-circle-play fa-2xl"></i>
+                    <span><button class="btn btn-primary">Book</button></span>
+                </div>
+            </div>
+        </div>
+        <div class="m1">
+            <div class="movImage">
+                <img src="https://th-i.thgim.com/public/entertainment/movies/w49s0b/article66064456.ece/alternates/FREE_1200/thunivu.jpeg" alt="">
+            </div>
+            <div class="details">
+                <h1 class="h1mov">Thunivu</h1>
+                <h3 class="h3mov">Directed by H.Vinoth</h3>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="span">5/5</span>
+                </div>
+                <div class="tags">
+                    <span>Action</span>
+                    <span>Heist</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi tenetur, nostrum nulla nisi praesentium a pariatur assumenda! Architecto veritatis similique ut nihil delectus maiores dolore repellendus enim laboriosam deleniti ad assumenda dolor quia optio aspernatur a exercitationem, officia nulla. Possimus quas reprehenderit saepe! Vitae quaerat aperiam doloremque, unde suscipit beatae?</p>
+                </div>
+                <div class="cast">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="static/images/wrath-cast/jason1.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/Niamh3.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/post4.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/scott2.jpeg"></li>
+                    </ul>
+                </div>
+                <div class="buttonss">
+                    <i class="fa-regular fa-circle-play fa-2xl"></i>
+                    <span><button class="btn btn-primary"><a href="thinuvuBook.html">Book</a></button></span>
+                </div>
+            </div>
+        </div>
+        <div class="m1">
+            <div class="movImage">
+                <img src="static/images/avatar/avatar.jpg" alt="">
+            </div>
+            <div class="details">
+                <h1 class="h1mov">Avatar: The way of water</h1>
+                <h3 class="h3mov">Directed by James Gunn</h3>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="span">5/5</span>
+                </div>
+                <div class="tags">
+                    <span>Action</span>
+                    <span>Heist</span>
+                </div>
+                <div class="info">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi nulla aut voluptatibus illum obcaecati voluptatum quibusdam corrupti praesentium ex mollitia sequi impedit doloribus, blanditiis aperiam numquam, eius qui, fuga incidunt architecto! In non praesentium sunt id aliquam minus doloribus exercitationem rem ipsa. Incidunt dicta ad porro autem cupiditate voluptas.</p>
+                </div>
+                <div class="cast">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="static/images/wrath-cast/jason1.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/Niamh3.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/post4.jpeg"></li>
+                        <li><img src="static/images/wrath-cast/scott2.jpeg"></li>
+                    </ul>
+                </div>
+                <div class="buttonss">
+                    <i class="fa-regular fa-circle-play fa-2xl"></i>
+                    <span><button class="btn btn-primary">Book</button></span>
+                </div>
+            </div>
+        </div>
+
+    <div class="overlay"></div>
+    <script src="static/js/main.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</html>

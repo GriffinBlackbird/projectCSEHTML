@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{ %  load static % }
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    background-color: black;
+  }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#image{
+  margin-left: 100px;
+  margin-top:20px;
+  margin-bottom:50px;
+  border-bottom:20px solid black;
+  border-top:20px solid black;
+  border-left:5px solid white;
+  border-right:5px solid white;
+  border-radius:3vmin;
+  
+  }
+  #p0{
+    font-size:1cm;
+    margin-left:80px;
+  }
+#p2{
+  font-size:0.5cm;
+  margin-right:170px;
+  color:black;
+  background-color: white;
+  margin-left:125px;
+ }
+ #p1{ 
+  margin-right:130px;
+  font-size:25px;
+  
+} 
+#p3{
+  font-size:0.5cm;
+  color:black;
+  margin-left:125px;
+  margin-right:200px;
+  background-color: white;
+}
+#p4{
+  margin-left:30px;
+  font-size:25px;
+}
+#button{
+  margin-bottom:250px;
+  margin-right:280px;
+  size:10px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:5px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img id="back" src="F:\HTML\myshow3.jpeg" alt="Snow" width=100% height=650px>
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left"><div id="image"><img src="F:\HTML\download.jpg" width="300px" hiehgt="450px"></div></div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered"><p id="p0">AVATAR:THE WAY-OF-WATER</p> 
+  <p id="p1">Releasing on 16th December</p>
+  <p id="p2">English,Tamil,Hindi,Malayalam,Kannada,Telugu</p>
+  <p id="p3">2D,3D,3D SCREEN X,4DX 3D,IMAX 3D</p>
+  <p id="p4">3h 12m•Action,Adventure,Fantasy,Sci-Fi•UA</p>
+  <a href="F:\HTML\cw\project1.9.html"><button id="button">Book Tickets</button></a>
+  </div>
+  
+</div>
+
+</body>
+</html> 

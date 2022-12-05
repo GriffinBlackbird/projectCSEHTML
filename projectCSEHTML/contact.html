@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{ %  load static % }
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: gold;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: gold;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>CONTACT FORM</h3>
+<p>Please enter your details and drop your problem in the Query box,
+   Thank you.</p>
+   
+<div class="container">
+  <form action="/action_page.php">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="gmail">Gmail</label>
+    <input type="text" id="gmail" name="gmail" placeholder="Your gmail..">
+    
+    <label for="ph num">Phone number</label>
+    <input type="text" id="ph num" name="ph num" placeholder="Your phone number..">
+
+    <label for="State">State</label>
+    <select id="State" name="State">
+      <option value="AP">Andhra Pradesh</option>
+      <option value="TS">Telangana</option>
+      <option value="TN">TamilNadu</option>
+      <option value="GA">Goa</option>
+      <option value="HR">Haryana</option>
+      <option value="AP">Arunachal Pradesh</option>
+      <option value="AS">Assam</option>
+      <option value="BH">Bihar</option>
+      <option value="CH">Chhattisgarh</option>
+      <option value="GJ">Gujarat</option>
+      <option value="HP">Himachal Pradesh</option>
+      <option value="JK">Jammu and Kashmir</option>
+      <option value="JKD">Jharkhand</option>
+      <option value="BN">Karnataka</option>
+      <option value="KL">Kerala</option>
+      <option value="MP">Madhya Pradesh</option>
+      <option value="MR">Maharashtra</option>
+      <option value="MNP">Manipur</option>
+      <option value="MGH">Meghalaya</option>
+      <option value="MIZ">Mizoram</option>
+      <option value="NG">Nagaland</option>
+      <option value="OD">Odisha</option>
+      <option value="PB">Punjab</option>
+      <option value="RJ">Rajasthan</option>
+      <option value="SK">Sikkim</option>
+      <option value="TRP">Tripura</option>
+      <option value="UP">Uttar Pradesh</option>
+      <option value="UK">Uttarakhand</option>
+      <option value="WB">West Bengal</option>
+    </select>
+
+    <label for="Query">Query</label>
+    <textarea id="Query" name="Query" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
